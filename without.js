@@ -25,11 +25,25 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const without = function(arr, values ) {
+const without = function(arr, values) {
   let filteredArr = [];
-  
 
+  for (let item of arr) {
+    let canPush = true;
 
+    if (values.length > 0) {
+      for (let val of values) {
+        if (val === item) {
+          canPush = false;
+          break;
+        }
+      }
+    }
+
+    if (canPush) {
+      filteredArr.push(item);
+    }
+  }
   return filteredArr;
 };
 
@@ -39,6 +53,7 @@ assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
 assertArraysEqual(without(["1", "2", "3"], ["5"]), ["1", "2", "3"]);
 assertArraysEqual(without([1, 2, 3], []), [1, 2, 3]);
+assertArraysEqual(without([], [1]), []);
 
 
 const words = ["hello", "world", "lighthouse"];
