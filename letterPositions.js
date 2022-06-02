@@ -30,15 +30,15 @@ const letterPositions = function(sentence) {
   const results = {};
   let index = 0;
 
-  for (c of sentence){
+  for (const c of sentence) {
     if (c !== " ") {
-      (results[c]) ? results[c].push(index): results[c] = [index];
+      (results[c]) ? results[c].push(index) : results[c] = [index];
     }
     index++;
   }
 
   return results;
-}
+};
 
 // TEST CASES
 let result1 = letterPositions("hello");
@@ -48,7 +48,7 @@ assertArraysEqual(result1["e"], [1]);
 assertArraysEqual(result1["l"], [2, 3]);
 assertArraysEqual(result1["o"], [4]);
 
-console.log("-----------------------------------")
+console.log("-----------------------------------");
 
 let result2 = letterPositions("lighthouse in the house");
 console.log(result2);
