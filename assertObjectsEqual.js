@@ -10,4 +10,4 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-module.exports = eqObjects;
+module.exports = assertObjectsEqual;
