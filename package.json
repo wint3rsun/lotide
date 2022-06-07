@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "LHL Lotide Assignment",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wint3rsun/lotide.git"
+  },
+  "author": "Abigail Addae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wint3rsun/lotide/issues"
+  },
+  "homepage": "https://github.com/wint3rsun/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
