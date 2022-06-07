@@ -1,35 +1,25 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
+describe("#tail", () => {
+  it("should return ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    const inputArray = ["Hello", "Lighthouse", "Labs"];
+    const expectedOutput = ["Lighthouse", "Labs"];
+    assert.deepEqual(tail(inputArray), expectedOutput);
+  });
 
-// TEST CODE
+  it("should not modify original array.", () => {
+    const inputArray = ["Hello", "Lighthouse", "Labs"];
+    assert.notDeepEqual(tail(inputArray), inputArray);
+  });
 
-// Test Case 1: Check the returned array elements
-console.log("Test Case 1: Check the returned array elements");
-console.log("----------");
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
-console.log("----------");
+  it("should return an empty array if passed an array with 1 item", () => {
+    const inputArray = [1];
+    assert.isEmpty(tail(inputArray));
+  });
 
-// Test Case 2: Check original array
-console.log("Test Case 2: Check original array");
-console.log("----------");
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
-console.log("----------");
-
-// Test Case 3: Array with single element
-console.log("Test Case 3: Array with single element");
-console.log("----------");
-const numbers = [1];
-assertEqual(tail(numbers).length, 0);
-console.log("----------");
-
-// Test Case 4: Empty array
-console.log("Test Case 4: Empty array");
-console.log("----------");
-assertEqual(tail([]).length, 0);
-console.log("----------");
+  it("should return an empty array if passed an empty array", () => {
+    const inputArray = [];
+    assert.isEmpty(tail(inputArray));
+  });
+});
