@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@wint3rsun/lotide",
   "version": "1.0.0",
   "description": "LHL Lotide Assignment",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/wint3rsun/lotide.git"
   },
-  "author": "Abigail Addae",
+  "author": "Abigail Addae(wint3rsun)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wint3rsun/lotide/issues"
